@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+:root {
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White-: hsl(0, 0%, 100%);
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--White-);
+  position: relative;
+  overflow: scroll;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+section::before,
+section::after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+section::before {
+  background-image: url(./images/bg-pattern-top-desktop.svg);
+  top: 0%;
+  left: 0%;
+}
+
+section::after {
+  background-image: url(./images/bg-pattern-bottom-desktop.svg);
+  bottom: -20%;
+  right: -20%;
+}
+
+.wrapper {
+  width: 85%;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-top {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-top .details {
+  width: 50%;
+  padding: 10px;
+}
+
+.details .tagline {
+  width: 80%;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--Very-Dark-Magenta);
+}
+.details .description {
+  width: 90%;
+  font-size: 1.5rem;
+  color: var(--Dark-Grayish-Magenta);
+  margin-top: 30px;
+}
+
+.ratings {
+  width: 50%;
+  padding: 10px;
+}
+
+.ratings .rating-item {
+  width: 80%;
+  height: 65px;
+  margin: 20px 0;
+  background-color: var(--Light-Grayish-Magenta);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rating-item .rating-points {
+  margin: 0 0 0 40px;
+}
+
+.rating-item .rating-stat {
+  margin: 0 30px 0 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--Very-Dark-Magenta);
+}
+
+/* bottom section */
+.container-bottom {
+  width: 100%;
+  height: 40%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.container-bottom .review-card {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--Very-Dark-Magenta);
+  border-radius: 15px;
+}
+
+.card-head {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
+
+.card-head img {
+  width: 50px;
+  height: 50px;
+  margin: 10px 30px 10px 20px;
+  border-radius: 50%;
+}
+
+.user {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-evenly;
+}
+
+.user .name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--White-);
+}
+
+.user .verification {
+  font-size: 1.3rem;
+  color: var(--Soft-Pink);
+}
+
+.card-foot {
+  width: 80%;
+}
+
+.card-foot .review {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--White-);
+  line-height: 20px;
+}
+
+@media screen and (min-width: 978px) {
+  .ratings .rating-item:nth-child(1) {
+    margin-left: 0px;
+  }
+
+  .ratings .rating-item:nth-child(2) {
+    margin-left: 50px;
+  }
+
+  .ratings .rating-item:nth-child(3) {
+    margin-left: 100px;
+  }
+
+  .review-card:nth-child(1) {
+    margin-top: 0;
+  }
+  .review-card:nth-child(2) {
+    margin-top: 20px;
+  }
+  .review-card:nth-child(3) {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 978px) {
+  .wrapper {
+    width: 95%;
+    height: 100vh;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .container-top {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .container-top .details {
+    width: 90%;
+
+    text-align: center;
+  }
+
+  .details .tagline {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 3rem;
+  }
+
+  .details .description {
+    margin: 40px auto;
+  }
+
+  .ratings {
+    width: 90%;
+  }
+  .ratings .rating-item {
+    width: 100%;
+    height: 100px;
+    margin: 20px auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rating-item .rating-points {
+    margin: 10px 0;
+  }
+
+  .container-bottom {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1, 1fr);
+    gap: 20px;
+  }
+  .container-bottom .review-card {
+    width: 90%;
+    height: 100%;
+    margin: 20px auto;
+  }
+}
