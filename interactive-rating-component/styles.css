@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Overpass";
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background: hsl(216, 12%, 8%);
+}
+
+.wrapper {
+  max-width: 360px;
+  height: 380px;
+  margin: 200px auto;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: linear-gradient(180deg, hsl(213, 19%, 22%), hsl(216, 12%, 12%));
+  border-radius: 30px;
+}
+
+.front-side {
+  align-items: start;
+}
+
+.front-side .star {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  background-color: hsl(213, 5.69%, 43%, 50%);
+  border-radius: 50%;
+}
+
+.star img {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.front-side h3 {
+  font-size: 1.9rem;
+  color: white;
+}
+
+.front-side p {
+  color: hsl(217, 12%, 63%);
+  font-size: 1rem;
+}
+
+.ratings {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.ratings button {
+  width: 50px;
+  height: 50px;
+  font-size: 1.1rem;
+  color: hsl(217, 12%, 63%);
+  border: none;
+  border-radius: 50%;
+  background-color: hsl(213, 19%, 18%);
+}
+
+.ratings button:hover {
+  color: black;
+  background-color: orange;
+}
+
+#submit {
+  width: 100%;
+  height: 45px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background-color: orange;
+  border: none;
+  border: none;
+  border-radius: 35px;
+}
+
+#submit:active {
+  background-color: white;
+}
+
+.back-side {
+  display: none;
+  align-items: center;
+  text-align: center;
+}
+
+.back-side img {
+  width: 150px;
+  height: 110px;
+}
+
+.output {
+  width: 60%;
+  height: 40px;
+  font-size: 1rem;
+  color: orange;
+  line-height: 40px;
+  border-radius: 30px;
+  background-color: hsl(213, 19%, 22%);
+  word-spacing: 2px;
+}
+
+.back-side h2 {
+  font-size: 2.3rem;
+  font-weight: 400;
+  color: white;
+}
+
+.back-side p {
+  font-size: 1rem;
+  color: hsl(217, 12%, 63%);
+}
+
+@media screen and (width<375px) {
+  .wrapper {
+    width: 340px;
+    height: 380px;
+    margin: 200px auto;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: linear-gradient(180deg, hsl(213, 19%, 22%), hsl(216, 12%, 12%));
+    border-radius: 30px;
+  }
+
+  .back-side {
+    display: none;
+    align-items: center;
+    text-align: center;
+  }
+}
