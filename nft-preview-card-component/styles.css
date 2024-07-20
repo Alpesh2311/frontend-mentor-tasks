@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: hsl(217, 54%, 11%);
+}
+
+.container {
+  max-width: 365px;
+  height: 600px;
+  padding: 30px;
+  margin: 150px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 20px;
+}
+.image {
+  width: 100%;
+  height: 55%;
+  position: relative;
+}
+.equilibrium {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.overlay {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  opacity: 0;
+  background-color: hsl(178, 100%, 50%);
+}
+
+.image:hover .overlay {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.image:hover .view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  cursor: pointer;
+}
+
+.container h3 {
+  font-size: 1.3rem;
+  color: white;
+  font-family: "Outfit";
+}
+.container h3:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+.description {
+  font-size: 1rem;
+  color: hsl(215, 51%, 70%);
+}
+
+.details {
+  width: 100%;
+  height: 60px;
+  padding: 0 0 20px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid hsl(215, 51%, 70%);
+}
+
+.mid {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ethereum {
+  font-size: 0.9rem;
+  color: hsl(178, 100%, 50%);
+  justify-content: start;
+}
+.ethereum img {
+  width: 15px;
+  height: 25px;
+  margin-right: 15px;
+}
+.time-left {
+  font-size: 0.9rem;
+  color: hsl(215, 51%, 70%);
+  justify-content: end;
+}
+
+.time-left img {
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+}
+
+.profile {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
+
+.profile img {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.profile p {
+  color: hsl(215, 51%, 70%);
+}
+.profile p span {
+  color: white;
+  margin-left: 2px;
+}
+.profile p span:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
