@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400&family=Big+Shoulders+Display:wght@700&display=swap");
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --Very-darkcyan: hsl(179, 100%, 13%);
+  --white: white;
+  --light-gray: hsl(0, 0%, 95%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend Deca", "Big Shoulders Display";
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+}
+
+.wrapper {
+  min-width: 65%;
+  width: 65%;
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* border-radius: 20px; */
+}
+
+.containers {
+  width: 100%;
+  height: 100%;
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-evenly;
+}
+
+.sedan {
+  background-color: var(--bright-orange);
+  border-radius: 15px 0 0 15px;
+}
+.suv {
+  background-color: var(--dark-cyan);
+}
+.luxury {
+  background-color: var(--Very-darkcyan);
+  border-radius: 0 15px 15px 0;
+}
+.containers img {
+  margin: 5px 0;
+}
+
+.containers .name {
+  margin: 10px 0;
+  font-family: "Big Shoulders Display";
+  font-size: 3rem;
+  color: var(--white);
+}
+
+.containers .description {
+  font-family: "Lexend Deca";
+  font-size: 1.2rem;
+  color: white;
+}
+
+.containers .learn {
+  width: 65%;
+  height: 55px;
+  margin-top: 40px;
+  border: 1px solid var(--white);
+  border-radius: 25px;
+  font-size: 1.15rem;
+  background-color: var(white);
+}
+.containers .learn:hover {
+  color: var(--white);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.sedan .learn {
+  color: var(--bright-orange);
+}
+.suv .learn {
+  color: var(--dark-cyan);
+}
+.luxury .learn {
+  color: var(--Very-darkcyan);
+}
+
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .containers .name {
+    font-size: 2.5rem;
+  }
+
+  .containers .description {
+    font-size: 0.95rem;
+  }
+  .containers .learn {
+    font-size: 1rem;
+    width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 80%;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sedan {
+    background-color: var(--bright-orange);
+    border-radius: 15px 15px 0 0;
+  }
+  .suv {
+    background-color: var(--dark-cyan);
+  }
+  .luxury {
+    background-color: var(--Very-darkcyan);
+    border-radius: 0 0 15px 15px;
+  }
+  .containers .learn {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .containers .learn {
+    width: 60%;
+  }
+}
