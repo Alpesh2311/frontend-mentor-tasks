@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca:wght@400&display=swap");
+
+:root {
+  --main-background: hsl(233, 47%, 7%);
+  --card-background: hsl(244, 38%, 16%);
+  --accent: hsl(277, 64%, 61%);
+  --main-heading: hsl(0, 0%, 100%);
+  --main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Lexend Deca";
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: var(--main-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 15px;
+  background-color: var(--card-background);
+  overflow: hidden;
+}
+
+.text-content {
+  width: 55%;
+  padding: 50px 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-evenly;
+}
+
+.heading {
+  font-size: 2em;
+  font-family: "Lexend Deca";
+  color: var(--main-heading);
+}
+
+.heading span {
+  color: var(--accent);
+}
+
+.description {
+  margin: 20px 0;
+  color: var(--main-paragraph);
+}
+
+.count {
+  width: 100%;
+  /* margin-top: 60px; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stat-item h2 {
+  color: var(--main-heading);
+}
+
+.stat-item p {
+  margin-top: 5px;
+  font-size: 0.8rem;
+  color: var(--stat-headings);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.picture {
+  width: 45%;
+  position: relative;
+}
+.picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0 15px 15px 0;
+}
+
+.picture .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 15px 15px 0;
+  background-color: var(--accent);
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .text-content {
+    width: 100%;
+    padding: 20px;
+  }
+  .heading {
+    font-size: 2rem;
+  }
+
+  .picture {
+    width: 100%;
+    height: 45%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .wrapper {
+    width: 90%;
+    margin: 100px auto;
+    border-radius: 15px;
+    background-color: var(--card-background);
+  }
+  .text-content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .count {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .stat-item {
+    margin: 10px 0;
+  }
+}
