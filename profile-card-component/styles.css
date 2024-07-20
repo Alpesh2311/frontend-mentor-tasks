@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --Dark-cyan: hsl(185, 75%, 39%);
+  --desaturated-blue: hsl(229, 23%, 23%);
+  --grayish-blue: hsl(227, 10%, 46%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans";
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--Dark-cyan);
+  position: relative;
+  /* overflow: hidden; */
+  z-index: -1;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+body::before {
+  background-image: url(./images/bg-pattern-top.svg);
+  top: -50%;
+  left: -9%;
+}
+body::after {
+  background-image: url(./images/bg-pattern-bottom.svg);
+  bottom: -50%;
+  right: -50%;
+}
+
+.container {
+  max-width: 340px;
+  height: 360px;
+
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.top-card {
+  width: 100%;
+  height: 40%;
+}
+.top-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.bottom-card {
+  width: 100%;
+  height: 60%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: white;
+  border-radius: 0 0 10px 10px;
+}
+.bottom-card .profile {
+  width: 85px;
+  height: 85px;
+  padding: 5px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+}
+
+.bottom-card .name {
+  margin-top: 40px;
+  font-size: 1.2rem;
+  color: var(--desaturated-blue);
+}
+
+.bottom-card .name span {
+  margin-left: 5px;
+  color: var(--grayish-blue);
+}
+
+.bottom-card .place {
+  color: var(--grayish-blue);
+}
+
+.social {
+  width: 100%;
+  height: 30%;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  border-top: 1px solid var(--grayish-blue);
+}
+
+.social-stats h2 {
+  font-size: 1.5rem;
+  color: var(--desaturated-blue);
+}
+.social-stats p {
+  font-size: 0.6rem;
+  color: var(--grayish-blue);
+}
+
+@media screen and (max-width: 1200px) {
+  body::before {
+    left: -21%;
+  }
+}
+@media screen and (max-width: 978px) {
+  body::before {
+    left: -37%;
+  }
+}
+@media screen and (max-width: 420px) {
+  body::before {
+    top: -11%;
+    left: -56%;
+  }
+}
